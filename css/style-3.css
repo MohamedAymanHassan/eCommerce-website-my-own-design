@@ -1,0 +1,105 @@
+@import url('style.css');
+.sidebar-products {
+    display: grid;
+    grid-template-areas: " ls ls ls p p p p p p p p";
+}
+.left-sidebar {
+    grid-area: ls;
+    padding: 20px;
+    border-right: 2px solid rgba(42, 43, 42, 0.15);
+    margin-right: 30px;
+}
+.products {
+    grid-area: p;
+    margin-right: 30px;
+}
+summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.content-details {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+.product-row-one {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+#one {
+    padding: 20px 0;
+    line-height: 30px;
+}
+#two {
+    padding: 20px 0;
+    line-height: 30px;
+}
+#three {
+    padding: 20px 0;
+    line-height: 30px;
+}
+#four {
+    padding: 20px 0;
+    line-height: 30px;
+}
+#five {
+    padding: 20px 0;
+    line-height: 30px;
+}
+input[type="checkbox"] {
+    margin-right: 7px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+hr {
+    border: 1px solid rgb(211, 211, 211);
+}
+
+.next-no-prev {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center;
+    margin: 50px 0;
+}
+
+.prev-btn {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 5px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: -2px 2px 0 0;
+}
+
+.next-btn {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 5px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: -2px 2px 0 0;
+}
+
+.btn2 {
+    background-color: transparent;
+    border: 2px solid black;
+    padding: 5px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    box-shadow: -2px 2px 0 0;
+}

@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Orbitron:wght@400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+   <link rel="stylesheet" href="./css/style.css" />
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Orbitron:wght@400..900&family=Ribeye+Marrow&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Train+One&display=swap"
+      rel="stylesheet" />
+   <link rel="icon" type="image/x-icon" href="./assets/siteful-favicon.ico" />
+   <title>SiteFul</title>
+   <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      .sidebar {
+         height: 100%;
+         width: 0;
+         position: fixed;
+         top: 0;
+         right: 0;
+         background-color: white;
+         overflow-x: hidden;
+         transition: 0.5s;
+         padding-top: 60px;
+         color: white;
+         box-shadow: -5px 0px 10px 0px #e8e8e8;
+      }
+
+      .sidebar a {
+         padding: 8px 8px 8px 32px;
+         text-decoration: none;
+         font-size: 25px;
+         color: #818181;
+         display: block;
+         transition: 0.3s;
+      }
+
+      .sidebar a:hover {
+         color: gray;
+      }
+
+      .sidebar .closebtn {
+         position: absolute;
+         top: 0;
+         color: black;
+         right: 25px;
+         font-size: 36px;
+         margin-left: 50px;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="welcome-message">
+      <span>This project isn't finished yet. If you're still seeing this message and the website isn't complete, it means the developer (which is me) is lazy and still hasn’t finished it, busy with another project, and completely forgot about this one!👀😆</span>
+  </div>
+
+   <header>
+      <div class="main-header">
+         <div class="search-section">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search..." />
+         </div>
+         <div class="logo-links">
+            <a href="#">Delivery</a>
+            <a href="#">Trade-in</a>
+            <img src="./assets/1.png" style="cursor: pointer;" id="logo-img" class="logo-img" alt="My-Logo" />
+            <a href="#">Pickup</a>
+            <a href="#">Stock</a>
+         </div>
+         <div class="icons-section">
+            <a href="#" id="openBtn"><i class="fa-solid fa-basket-shopping"></i></a>
+            <a href=""><i class="fa-solid fa-user"></i></a>
+         </div>
+
+         <div id="sidebar" class="sidebar cart">
+            <a href="javascript:void(0)" class="closebtn" id="closeBtn">&times;</a>
+            <h1 style="display: flex; justify-content: center; color: black; margin-bottom: 20px;">The Cart</h1>
+            <div class="cart-sidebar-section cart-items" id="cart-content" style="display: flex; justify-content: space-around; ">
+               <p style="color: gray;">Your cart is empty.</p>
+            </div>
+
+            <!-- <div class="" style="display: flex;justify-content: center; margin-top: 20px;">
+               <a href="checkout.html"> <button type="button" onclick="buyIt()" name="button" class="buy" style="background-color: black;color: white;border: 1px solid black;border-radius: 5px;padding: 5px 15px;font-size: 18px;cursor: pointer;width: 200px;transition: 0.6s;width: 513px;height: 50px;border-radius: 50px;font-weight: 600;"> Buy Now </button> </a>
+            </div> -->
+         </div>
+      </div>
+
+
+      
+      <div class="secondary-header">
+         <div class="links-categories">
+            <a href="">New Arrivals</a>
+            <a href="">Best Sellers</a>
+            <a href="">New Release</a>
+            <a href="">Footwear</a>
+            <a href="">Men</a>
+            <a href="">Women</a>
+            <a href="">Kids</a>
+            <a href="">Brands</a>
+            <a href="">Apparel</a>
+            <a href="">Sale</a>
+            <a href="">Gifts</a>
+            <a href="">Sale</a>
+            <a href="">Outlet</a>
+         </div>
+      </div>
+   </header>
+   <main>
+      <section class="welcome-section">
+         <div class="img-shoes-nike">
+            <img src="./assets/p-2.png" alt="Nike Shoes" style="width: 570px" />
+         </div>
+         <div class="welcome-p">
+            <p>Style Perfectionist!</p>
+            <h1>Best Collection</h1>
+            <p>
+               Order online and have your products <br />
+               delivered to your closest store for free
+            </p>
+         </div>
+      </section>
+      <section class="brands-section">
+         <div class="brands-name">
+            <img src="./assets/nike.png" alt="Nike" style="width: 70px; height: 70px" />
+            <img src="./assets/adidas.png" alt="Adidas" style="width: 70px; height: 70px" />
+            <img src="./assets/zara.png" alt="Zara" style="width: 70px; height: 70px" />
+            <img src="./assets/puma.png" alt="Puma" style="width: 70px; height: 70px" />
+            <img src="./assets/calvin-klein.png" alt="Calvin Klein" style="width: 70px; height: 70px" />
+         </div>
+      </section>
+      <!--- Here the products div  --->
+      <section class="products">
+         <div class="">
+            <div class="columns-pro">
+               <h1 class="title">New Arrivals</h1>
+               <a href="search-page.html" class="view-all-link">View All</a>
+               <div class="row-pro">
+                  <a href="product info.html" style="text-decoration: none; color: black">
+                     <div class="products-info product">
+                        <div class="pro-img-frame">
+                           <img src="./assets/p-1.png" alt="" class="product-img">
+                        </div>
+                        <span class="offer-span">
+                           <i class="fa-solid fa-tag"></i>&nbsp;&nbsp;50% off
+                        </span>
+                        <div>
+                           <p style="font-weight: 200">Nike</p>
+                           <h3>NIKE REVOLUTION 6 ROAD RUNNING SHOES MEN DC3728-BLK</h3>
+                        </div>
+                        <div
+                           style="display: flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 20px;">
+                           <span style="color: red;font-weight: 700;font-size: 25px;margin-right: 10px;">2000 EGP</span>
+                           <span style="text-decoration: line-through;font-weight: 300;color: gray;">4000 EGP</span>
+                        </div>
+                        <button type="button" name="button" class="add add-to-cart" id="add-to-cart-now" style="
+                           background-color: white;
+                           border: 1px solid black;
+                           padding: 5px 15px;
+                           font-size: 18px;
+                           width: 200px;
+                           transition: 0.6s;
+                           height: 50px;
+                           border-radius: 50px;
+                           border: 2px solid black;
+                           cursor: pointer;
+                           width: 210px;
+                           font-weight: 600;
+                           margin-top: 10px;
+                           ">Add To Cart</button>
+                     </div>
+                  </a>
+                  <a href="product info.html" style="text-decoration: none; color: black">
+                     <div class="products-info">
+                        <div class="pro-img-frame">
+                           <img src="./assets/p-2.png" class="product-img" alt="" />
+                        </div>
+                        <span class="offer-span">
+                           <i class="fa-solid fa-tag"></i>&nbsp;&nbsp;50% off
+                        </span>
+                        <div>
+                           <p style="font-weight: 200">Nike</p>
+                           <h3>NIKE REVOLUTION 6 ROAD RUNNING SHOES MEN DC3728-BLK</h3>
+                        </div>
+                        <div style="
+                              display: flex;
+                              flex-direction: row;
+                              justify-content: center;
+                              align-items: center;
+                              margin-top: 20px;
+                              ">
+                           <span style="
+                                 color: red;
+                                 font-weight: 700;
+                                 font-size: 25px;
+                                 margin-right: 10px;
+                                 ">2000 EGP</span>
+                           <span style="
+                                 text-decoration: line-through;
+                                 font-weight: 300;
+                                 color: gray;
+                                 ">4000 EGP</span>
+                        </div>
+
+                        <button type="button" name="button" id="add-to-cart-now" class="add" style="
+                           background-color: white;
+                           border: 1px solid black;
+                           padding: 5px 15px;
+                           font-size: 18px;
+                           width: 200px;
+                           transition: 0.6s;
+                           height: 50px;
+                           border-radius: 50px;
+                           border: 2px solid black;
+                           cursor: pointer;
+                           width: 210px;
+                           font-weight: 600;
+                           margin-top: 10px;">
+                           Add To Cart</button>
+                     </div>
+                  </a>
+                  <a href="product info.html" style="text-decoration: none; color: black">
+                     <div class="products-info">
+                        <div class="pro-img-frame">
+                           <img src="./assets/p-3.png" class="product-img" alt="" />
+                        </div>
+                        <span class="offer-span">
+                           <i class="fa-solid fa-tag"></i>&nbsp;&nbsp;50% off
+                        </span>
+                        <div>
+                           <p style="font-weight: 200">Nike</p>
+                           <h3>NIKE REVOLUTION 6 ROAD RUNNING SHOES MEN DC3728-BLK</h3>
+                        </div>
+                        <div
+                           style="display: flex;flex-direction: row;justify-content: center;align-items: center;margin-top: 20px;">
+                           <span style="color: red;font-weight: 700;font-size: 25px;margin-right: 10px;">2000 EGP</span>
+                           <span style="
+                                 text-decoration: line-through;
+                                 font-weight: 300;
+                                 color: gray;
+                                 ">4000 EGP</span>
+                        </div>
+                        <button type="button" name="button" id="add-to-cart-now" class="add" style="
+                           background-color: white;
+                           border: 1px solid black;
+                           padding: 5px 15px;
+                           font-size: 18px;
+                           width: 200px;
+                           transition: 0.6s;
+                           height: 50px;
+                           border-radius: 50px;
+                           border: 2px solid black;
+                           cursor: pointer;
+                           width: 210px;
+                           font-weight: 600;
+                           margin-top: 10px;">
+                           Add To Cart</button>
+                     </div>
+                  </a>
+                  <a href="product info.html" style="text-decoration: none; color: black">
+                     <div class="products-info">
+                        <div class="pro-img-frame">
+                           <img src="./assets/p-4.png" class="product-img" alt="" />
+                        </div>
+                        <span class="offer-span">
+                           <i class="fa-solid fa-tag"></i>&nbsp;&nbsp;50% off
+                        </span>
+                        <div>
+                           <p style="font-weight: 200">Nike</p>
+                           <h3>NIKE REVOLUTION 6 ROAD RUNNING SHOES MEN DC3728-BLK</h3>
+                        </div>
+                        <div style="
+                              display: flex;
+                              flex-direction: row;
+                              justify-content: center;
+                              align-items: center;
+                              margin-top: 20px;
+                              ">
+                           <span style="
+                                 color: red;
+                                 font-weight: 700;
+                                 font-size: 25px;
+                                 margin-right: 10px;
+                                 ">2000 EGP</span>
+                           <span style="
+                                 text-decoration: line-through;
+                                 font-weight: 300;
+                                 color: gray;
+                                 ">4000 EGP</span>
+                        </div>
+                        <button type="button" name="button" id="add-to-cart-now" class="add" style="
+                           background-color: white;
+                           border: 1px solid black;
+                           padding: 5px 15px;
+                           font-size: 18px;
+                           width: 200px;
+                           transition: 0.6s;
+                           height: 50px;
+                           border-radius: 50px;
+                           border: 2px solid black;
+                           cursor: pointer;
+                           width: 210px;
+                           font-weight: 600;
+                           margin-top: 10px;">
+                           Add To Cart</button>
+                     </div>
+                  </a>
+               </div>
+               <h1 class="title-two">Best Sellers</h1>
+               <a href="search-page.html" class="view-all-link">View All</a>
+               <div class="row-pro">
+                  <a href="product info.html" style="text-decoration: none; color: black">
+                     <div class="products-info">
+                        <div class="pro-img-frame">
+                           <img src="./assets/p-5.png" class="product-img" alt="" />
+                        </div>
+                        <span class="offer-span">
+                           <i class="fa-solid fa-tag"></i>&nbsp;&nbsp;50% off
+                        </span>
+                        <div>
+                           <p style="font-weight: 200">Nike</p>
+                           <h3>NIKE REVOLUTION 6 ROAD RUNNING SHOES MEN DC3728-BLK</h3>
+                        </div>
+                        <div style="
+                              display: flex;
+                              flex-direction: row;
+                              justify-content: center;
+                              align-items: center;
+                              margin-top: 20px;
+                              ">
+                           <span style="
+                                 color: red;
+                                 font-weight: 700;
+                                 font-size: 25px;
+                                 margin-right: 10px;
+                                 ">2000 EGP</span>
+                           <span style="
+                                 text-decoration: line-through;
+                                 font-weight: 300;
+                                 color: gray;
+                                 ">4000 EGP</span>
+                        </div>
+                        <button type="button" name="button" id="add-to-cart-now" class="add" style="
+                           background-color: white;
+                           border: 1px solid black;
+                           padding: 5px 15px;
+                           font-size: 18px;
+                           width: 200px;
+                           transition: 0.6s;
+                           height: 50px;
+                           border-radius: 50px;
+                           border: 2px solid black;
+                           cursor: pointer;
+                           width: 210px;
+                           font-weight: 600;
+                           margin-top: 10px;">
+                           Add To Cart</button>
+                     </div>
+                  </a>
+                  <a href="product info.html" style="text-decoration: none; color: black">
+                     <div class="products-info">
+                        <div class="pro-img-frame">
+                           <img src="./assets/p-6.png" class="product-img" alt="" />
+                        </div>
+                        <span class="offer-span">
+                           <i class="fa-solid fa-tag"></i>&nbsp;&nbsp;50% off
+                        </span>
+                        <div>
+                           <p style="font-weight: 200">Nike</p>
+                           <h3>NIKE REVOLUTION 6 ROAD RUNNING SHOES MEN DC3728-BLK</h3>
+                        </div>
+                        <div style="
+                              display: flex;
+                              flex-direction: row;
+                              justify-content: center;
+                              align-items: center;
+                              margin-top: 20px;
+                              ">
+                           <span style="
+                                 color: red;
+                                 font-weight: 700;
+                                 font-size: 25px;
+                                 margin-right: 10px;
+                                 ">2000 EGP</span>
+                           <span style="
+                                 text-decoration: line-through;
+                                 font-weight: 300;
+                                 color: gray;
+                                 ">4000 EGP</span>
+                        </div>
+                        <button type="button" name="button" id="add-to-cart-now" class="add" style="
+                           background-color: white;
+                           border: 1px solid black;
+                           padding: 5px 15px;
+                           font-size: 18px;
+                           width: 200px;
+                           transition: 0.6s;
+                           height: 50px;
+                           border-radius: 50px;
+                           border: 2px solid black;
+                           cursor: pointer;
+                           width: 210px;
+                           font-weight: 600;
+                           margin-top: 10px;">
+                           Add To Cart</button>
+                     </div>
+                  </a>
+                  <a href="product info.html" style="text-decoration: none; color: black">
+                     <div class="products-info">
+                        <div class="pro-img-frame">
+                           <img src="./assets/p-1.png" class="product-img" alt="" />
+                        </div>
+                        <span class="offer-span">
+                           <i class="fa-solid fa-tag"></i>&nbsp;&nbsp;50% off
+                        </span>
+                        <div>
+                           <p style="font-weight: 200">Nike</p>
+                           <h3>NIKE REVOLUTION 6 ROAD RUNNING SHOES MEN DC3728-BLK</h3>
+                        </div>
+                        <div style="
+                              display: flex;
+                              flex-direction: row;
+                              justify-content: center;
+                              align-items: center;
+                              margin-top: 20px;
+                              ">
+                           <span style="
+                                 color: red;
+                                 font-weight: 700;
+                                 font-size: 25px;
+                                 margin-right: 10px;
+                                 ">2000 EGP</span>
+                           <span style="
+                                 text-decoration: line-through;
+                                 font-weight: 300;
+                                 color: gray;
+                                 ">4000 EGP</span>
+                        </div>
+                        <button type="button" name="button" id="add-to-cart-now" class="add" style="
+                           background-color: white;
+                           border: 1px solid black;
+                           padding: 5px 15px;
+                           font-size: 18px;
+                           width: 200px;
+                           transition: 0.6s;
+                           height: 50px;
+                           border-radius: 50px;
+                           border: 2px solid black;
+                           cursor: pointer;
+                           width: 210px;
+                           font-weight: 600;
+                           margin-top: 10px;">
+                           Add To Cart</button>
+                     </div>
+                  </a>
+                  <a href="product info.html" style="text-decoration: none; color: black">
+                     <div class="products-info">
+                        <div class="pro-img-frame">
+                           <img src="./assets/p-2.png" class="product-img" alt="" />
+                        </div>
+                        <span class="offer-span">
+                           <i class="fa-solid fa-tag"></i>&nbsp;&nbsp;50% off
+                        </span>
+                        <div>
+                           <p style="font-weight: 200">Nike</p>
+                           <h3>NIKE REVOLUTION 6 ROAD RUNNING SHOES MEN DC3728-BLK</h3>
+                        </div>
+                        <div style="
+                              display: flex;
+                              flex-direction: row;
+                              justify-content: center;
+                              align-items: center;
+                              margin-top: 20px;
+                              ">
+                           <span style="
+                                 color: red;
+                                 font-weight: 700;
+                                 font-size: 25px;
+                                 margin-right: 10px;
+                                 ">2000 EGP</span>
+                           <span style="
+                                 text-decoration: line-through;
+                                 font-weight: 300;
+                                 color: gray;
+                                 ">4000 EGP</span>
+                        </div>
+                        <button type="button" name="button" id="add-to-cart-now" class="add" style="
+                           background-color: white;
+                           border: 1px solid black;
+                           padding: 5px 15px;
+                           font-size: 18px;
+                           width: 200px;
+                           transition: 0.6s;
+                           height: 50px;
+                           border-radius: 50px;
+                           border: 2px solid black;
+                           cursor: pointer;
+                           width: 210px;
+                           font-weight: 600;
+                           margin-top: 10px;">
+                           Add To Cart</button>
+                     </div>
+                  </a>
+               </div>
+               <h1 class="title-three">New Release</h1>
+               <a href="search-page.html" class="view-all-link">View All</a>
+               <div class="row-pro">
+                  <a href="product info.html" style="text-decoration: none; color: black">
+                     <div class="products-info">
+                        <div class="pro-img-frame">
+                           <img src="./assets/p-3.png" class="product-img" alt="" />
+                        </div>
+                        <span class="offer-span">
+                           <i class="fa-solid fa-tag"></i>&nbsp;&nbsp;50% off
+                        </span>
+                        <div>
+                           <p style="font-weight: 200">Nike</p>
+                           <h3>NIKE REVOLUTION 6 ROAD RUNNING SHOES MEN DC3728-BLK</h3>
+                        </div>
+                        <div style="
+                              display: flex;
+                              flex-direction: row;
+                              justify-content: center;
+                              align-items: center;
+                              margin-top: 20px;
+                              ">
+                           <span style="
+                                 color: red;
+                                 font-weight: 700;
+                                 font-size: 25px;
+                                 margin-right: 10px;
+                                 ">2000 EGP</span>
+                           <span style="
+                                 text-decoration: line-through;
+                                 font-weight: 300;
+                                 color: gray;
+                                 ">4000 EGP</span>
+                        </div>
+                        <button type="button" name="button" id="add-to-cart-now" class="add" style="
+                           background-color: white;
+                           border: 1px solid black;
+                           padding: 5px 15px;
+                           font-size: 18px;
+                           width: 200px;
+                           transition: 0.6s;
+                           height: 50px;
+                           border-radius: 50px;
+                           border: 2px solid black;
+                           cursor: pointer;
+                           width: 210px;
+                           font-weight: 600;
+                           margin-top: 10px;">
+                           Add To Cart</button>
+                     </div>
+                  </a>
+                  <a href="product info.html" style="text-decoration: none; color: black">
+                     <div class="products-info">
+                        <div class="pro-img-frame">
+                           <img src="./assets/p-4.png" class="product-img" alt="" />
+                        </div>
+                        <span class="offer-span">
+                           <i class="fa-solid fa-tag"></i>&nbsp;&nbsp;50% off
+                        </span>
+                        <div>
+                           <p style="font-weight: 200">Nike</p>
+                           <h3>NIKE REVOLUTION 6 ROAD RUNNING SHOES MEN DC3728-BLK</h3>
+                        </div>
+                        <div style="
+                              display: flex;
+                              flex-direction: row;
+                              justify-content: center;
+                              align-items: center;
+                              margin-top: 20px;
+                              ">
+                           <span style="
+                                 color: red;
+                                 font-weight: 700;
+                                 font-size: 25px;
+                                 margin-right: 10px;
+                                 ">2000 EGP</span>
+                           <span style="
+                                 text-decoration: line-through;
+                                 font-weight: 300;
+                                 color: gray;
+                                 ">4000 EGP</span>
+                        </div>
+                        <button type="button" name="button" id="add-to-cart-now" class="add" style="
+                           background-color: white;
+                           border: 1px solid black;
+                           padding: 5px 15px;
+                           font-size: 18px;
+                           width: 200px;
+                           transition: 0.6s;
+                           height: 50px;
+                           border-radius: 50px;
+                           border: 2px solid black;
+                           cursor: pointer;
+                           width: 210px;
+                           font-weight: 600;
+                           margin-top: 10px;">
+                           Add To Cart</button>
+                     </div>
+                  </a>
+                  <a href="product info.html" style="text-decoration: none; color: black">
+                     <div class="products-info">
+                        <div class="pro-img-frame">
+                           <img src="./assets/p-5.png" class="product-img" alt="" />
+                        </div>
+                        <span class="offer-span">
+                           <i class="fa-solid fa-tag"></i>&nbsp;&nbsp;50% off
+                        </span>
+                        <div>
+                           <p style="font-weight: 200">Nike</p>
+                           <h3>NIKE REVOLUTION 6 ROAD RUNNING SHOES MEN DC3728-BLK</h3>
+                        </div>
+                        <div style="
+                              display: flex;
+                              flex-direction: row;
+                              justify-content: center;
+                              align-items: center;
+                              margin-top: 20px;
+                              ">
+                           <span style="
+                                 color: red;
+                                 font-weight: 700;
+                                 font-size: 25px;
+                                 margin-right: 10px;
+                                 ">2000 EGP</span>
+                           <span style="
+                                 text-decoration: line-through;
+                                 font-weight: 300;
+                                 color: gray;
+                                 ">4000 EGP</span>
+                        </div>
+                        <button type="button" name="button" id="add-to-cart-now" class="add" style="
+                           background-color: white;
+                           border: 1px solid black;
+                           padding: 5px 15px;
+                           font-size: 18px;
+                           width: 200px;
+                           transition: 0.6s;
+                           height: 50px;
+                           border-radius: 50px;
+                           border: 2px solid black;
+                           cursor: pointer;
+                           width: 210px;
+                           font-weight: 600;
+                           margin-top: 10px;">
+                           Add To Cart</button>
+                     </div>
+                  </a>
+                  <a href="product info.html" style="text-decoration: none; color: black">
+                     <div class="products-info">
+                        <div class="pro-img-frame">
+                           <img src="./assets/p-6.png" class="product-img" alt="" />
+                        </div>
+                        <span class="offer-span">
+                           <i class="fa-solid fa-tag"></i>&nbsp;&nbsp;50% off
+                        </span>
+                        <div>
+                           <p style="font-weight: 200">Nike</p>
+                           <h3>NIKE REVOLUTION 6 ROAD RUNNING SHOES MEN DC3728-BLK</h3>
+                        </div>
+                        <div style="
+                              display: flex;
+                              flex-direction: row;
+                              justify-content: center;
+                              align-items: center;
+                              margin-top: 20px;
+                              ">
+                           <span style="
+                                 color: red;
+                                 font-weight: 700;
+                                 font-size: 25px;
+                                 margin-right: 10px;
+                                 ">2000 EGP</span>
+                           <span style="
+                                 text-decoration: line-through;
+                                 font-weight: 300;
+                                 color: gray;
+                                 ">4000 EGP</span>
+                        </div>
+                        <button type="button" name="button" id="add-to-cart-now" class="add" style="
+                           background-color: white;
+                           border: 1px solid black;
+                           padding: 5px 15px;
+                           font-size: 18px;
+                           width: 200px;
+                           transition: 0.6s;
+                           height: 50px;
+                           border-radius: 50px;
+                           border: 2px solid black;
+                           cursor: pointer;
+                           width: 210px;
+                           font-weight: 600;
+                           margin-top: 10px;">
+                           Add To Cart</button>
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <h1 class="title-four">Top Brands</h1>
+      <a href="search-page.html" class="view-all-link">View All</a>
+      <section class="brands-collections">
+         <div class="collection">
+            <img src="./assets/nike.png" alt="" style="
+                  background-color: #e4e4e4;
+                  width: 150px;
+                  height: 150px;
+                  border-radius: 10%;
+                  padding: 10px;
+                  " />
+            <h2 style="margin-bottom: 10px">Nike</h2>
+            <a href="search-page.html" class="collections-btn">
+               View All Collections <i class="fa-solid i fa-arrow-right"></i>
+            </a>
+         </div>
+         <div class="collection">
+            <img src="./assets/adidas.png" alt="" style="
+                  background-color: #e4e4e4;
+                  width: 150px;
+                  height: 150px;
+                  border-radius: 10%;
+                  padding: 10px;
+                  " />
+            <h2 style="margin-bottom: 10px">Adidas</h2>
+            <a href="search-page.html" class="collections-btn">
+               View All Collections <i class="fa-solid i fa-arrow-right"></i>
+            </a>
+         </div>
+         <div class="collection">
+            <img src="./assets/zara.png" alt="" style="
+                  background-color: #e4e4e4;
+                  width: 150px;
+                  height: 150px;
+                  border-radius: 10%;
+                  padding: 10px;
+                  " />
+            <h2 style="margin-bottom: 10px">Zara</h2>
+            <a href="search-page.html" class="collections-btn">
+               View All Collections <i class="fa-solid i fa-arrow-right"></i>
+            </a>
+         </div>
+         <div class="collection">
+            <img src="./assets/puma.png" alt="" style="
+                  background-color: #e4e4e4;
+                  width: 150px;
+                  height: 150px;
+                  border-radius: 10%;
+                  padding: 10px;
+                  " />
+            <h2 style="margin-bottom: 10px">Puma</h2>
+            <a href="search-page.html" class="collections-btn">
+               View All Collections <i class="fa-solid i fa-arrow-right"></i>
+            </a>
+         </div>
+         <div class="collection">
+            <img src="./assets/calvin-klein.png" alt="" style="
+                  background-color: #e4e4e4;
+                  width: 150px;
+                  height: 150px;
+                  border-radius: 10%;
+                  padding: 10px;
+                  " />
+            <h2 style="margin-bottom: 10px">Calvin Klien</h2>
+            <a href="search-page.html" class="collections-btn">
+               View All Collections <i class="fa-solid i fa-arrow-right"></i>
+            </a>
+         </div>
+      </section>
+   </main>
+   <section class="services-section">
+      <div class="two">
+         <div>
+            <i class="fa-solid fa-truck-fast"></i>
+         </div>
+         <div>
+            <h1 style="font-weight: 400">Free Shipping</h1>
+            <p style="font-weight: 300">
+               On all orders. Delivering to your doorstep
+            </p>
+         </div>
+      </div>
+      <div class="two">
+         <div>
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+         </div>
+         <div>
+            <h1 style="font-weight: 400">Exchange Or Refund</h1>
+            <p style="font-weight: 300">Hassle free returns within 14 days</p>
+         </div>
+      </div>
+      <div class="two">
+         <div>
+            <i class="fa-solid fa-box"></i>
+         </div>
+         <div>
+            <h1 style="font-weight: 400">Shop With Confidence</h1>
+            <p style="font-weight: 300">
+               Our brands 100% original. Money back guaranteed
+            </p>
+         </div>
+      </div>
+      <div class="two">
+         <div>
+            <i class="fa-regular fa-circle-question"></i>
+         </div>
+         <div>
+            <h1 style="font-weight: 400">Help Center</h1>
+            <p style="font-weight: 300">
+               Call +201234567890 daily from 10.00 am - 10:00 pm
+            </p>
+         </div>
+      </div>
+   </section>
+   <footer>
+      <div class="first-container">
+         <div class="info-about">
+            <h1 style="margin-bottom: 16px; font-weight: 400">About us</h1>
+            <p style="margin-bottom: 16px">
+               SiteFul is your shop for your favourite brands.
+            </p>
+            <h1 style="margin-bottom: 16px; font-weight: 400">Visit Us</h1>
+            <p>Nasr City, Cairo, Egypt</p>
+            <div class="social-links">
+               <i class="fa-brands fa-facebook"></i>
+               <i class="fa-brands fa-instagram"></i>
+               <i class="fa-brands fa-whatsapp"></i>
+               <i class="fa-brands fa-x-twitter"></i>
+            </div>
+         </div>
+         <div class="info-div">
+            <h1 style="font-size: 24px; font-weight: 400">Information</h1>
+            <div>
+               <a href="">About us</a>
+               <a href="">Contact us</a>
+               <a href="">Return Product</a>
+               <a href="">FAQs</a>
+            </div>
+         </div>
+         <div class="other-div">
+            <h1 style="font-size: 24px; font-weight: 400">Others</h1>
+            <div>
+               <a href="">Privacy Policy</a>
+               <a href="">Terms Of Service</a>
+               <a href="">Return, Refund & Cancellation Conditions</a>
+               <a href="">Shipping & Delivery Policy</a>
+            </div>
+         </div>
+         <div class="newsletter-div">
+            <h1 style="font-size: 24px; font-weight: 400">Newsletter</h1>
+            <p>
+               Sign up for exclusive offers, original stories, events and more.
+            </p>
+            <input type="email" placeholder="Your email" />
+            <i class="bi bi-arrow-right send-btn"></i>
+         </div>
+      </div>
+      <div class="langBtn-payWays">
+         <div class="site-lang">
+            <button class="button">
+               <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 262">
+                  <path fill="#4285F4"
+                     d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027">
+                  </path>
+                  <path fill="#34A853"
+                     d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1">
+                  </path>
+                  <path fill="#FBBC05"
+                     d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782">
+                  </path>
+                  <path fill="#EB4335"
+                     d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251">
+                  </path>
+               </svg>
+               Continue with Google
+            </button>
+         </div>
+         <div class="pay-ways">
+            <div>
+               <img src="./assets/visa.jpg" alt="" style="width: 45px; height: 27.5px" />
+               <img src="./assets/aman.png" alt="" style="width: 45px; height: 27.5px" />
+               <img src="./assets/master card.jpg" alt="" style="width: 45px; height: 27.5px" />
+               <img src="./assets/premium card.png" alt="" style="width: 45px; height: 27.5px" />
+               <img src="./assets/valu.jpg" alt="" style="width: 50px; height: 27.5px" />
+            </div>
+         </div>
+      </div>
+      <div class="second-container">
+         <div class="our-brand-name">
+            <h3>&copy; 2024 <a href="index.html">SiteFul.com</a></h3>
+         </div>
+         <div class="social-links-footer">
+            <a href="">Facebook</a>
+            <a href="">Instagram</a>
+            <a href="">Whatsapp</a>
+            <a href="">X-Twitter</a>
+         </div>
+      </div>
+   </footer>
+
+   <script type="text/javascript">
+      document.getElementById("openBtn").onclick = function () {
+         document.getElementById("sidebar").style.width = "800px";
+      }
+
+      document.getElementById("closeBtn").onclick = function () {
+         document.getElementById("sidebar").style.width = "0";
+      }
+   </script>
+   <script src="./js/main.js" charset="utf-8"></script>
+</body>
+
+</html>
